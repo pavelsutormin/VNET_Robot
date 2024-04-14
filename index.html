@@ -7,13 +7,13 @@
 <body>
 <div style="text-align: center;">
     <p>Robot Controls</p>
-    <button ontouchstart="call('f')" ontouchend="call('s')" onmouseup="call('s')" onmousedown="call(f)">Forward</button>
+    <button class="button" ontouchstart="call('f')" ontouchend="call('s')" onmouseup="call('s')" onmousedown="call(f)">Forward</button>
     <br>
-    <button ontouchstart="call('l')" ontouchend="call('s')" onmouseup="call('s')" onmousedown="call(l)">Left</button>
-    <button ontouchstart="call('s')">Stop</button>
-    <button ontouchstart="call('r')" ontouchend="call('s')" onmouseup="call('s')" onmousedown="call(r)">Right</button>
+    <button class="button" ontouchstart="call('l')" ontouchend="call('s')" onmouseup="call('s')" onmousedown="call(l)">Left</button>
+    <button class="button" ontouchstart="call('s')">Stop</button>
+    <button class="button" ontouchstart="call('r')" ontouchend="call('s')" onmouseup="call('s')" onmousedown="call(r)">Right</button>
     <br>
-    <button ontouchstart="call('b')" ontouchend="call('s')" onmouseup="call('s')" onmousedown="call(b)">Backward</button>
+    <button class="button" ontouchstart="call('b')" ontouchend="call('s')" onmouseup="call('s')" onmousedown="call(b)">Backward</button>
     <br>
     <br>
     <div class="slidecontainer">
@@ -22,11 +22,11 @@
         <input type="range" min="50" max="100" value="100" id="speed" class="slider" oninput="speed()">
     </div>
     <br>
-    <div>
-        <label for="name">Type in your name and click the button:</label>
+    <div style="text-align: center;">
+        <label for="name">Type in your name:</label>
         <br>
-        <input type="text" id="name">
-        <button onclick="say()">Click Me!</button>
+        <input class="input" type="text" id="name">
+        <button class="hello" onclick="say()">Say Hello!</button>
     </div>
 </div>
 </body>
@@ -54,7 +54,7 @@
     }
 </script>
 <style>
-    button {
+    .button {
         height: 250px;
         width: 250px;
         background-color: #88ff88;
@@ -64,11 +64,33 @@
         border-radius: 5px;
         font-size: 50px;
     }
-    button:hover {
+    .button:hover {
         background-color: #66ff66;
     }
-    button:click {
-        background-color: red;
+    .hello {
+        height: 100px;
+        width: 250px;
+        background-color: #88ff88;
+        border: solid;
+        border-color: #003300;
+        border-width: 1px;
+        border-radius: 5px;
+        font-size: 50px;
+        vertical-align: middle;
+    }
+    .hello:hover {
+        background-color: #66ff66;
+    }
+    .input {
+        height: 100px;
+        width: 200px;
+        background-color: #88ff88;
+        border: solid;
+        border-color: #003300;
+        border-width: 1px;
+        border-radius: 5px;
+        font-size: 20px;
+        vertical-align: middle;
     }
     body {
         background-image: url("matrix.avif");
